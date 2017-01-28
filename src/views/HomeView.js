@@ -5,10 +5,6 @@ import styles from './HomeView.scss';
 
 export class HomeView extends Component {
 
-  componentDidMount() {
-    this.props.getWelcomeMessage();
-  }
-
   render () {
     return (
       <section className={ styles.container }>
