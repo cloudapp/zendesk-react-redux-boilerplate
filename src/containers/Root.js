@@ -4,11 +4,11 @@ import { Router } from 'react-router';
 
 export default class Root extends Component {
 
-  createElement (Component, props) {
+  createElement(Component, props) {
     return <Component { ...this.props.store } />;
   }
 
-  get content () {
+  get content() {
     return (
       <Router history={ this.props.history } >
         { this.props.routes }
@@ -16,7 +16,7 @@ export default class Root extends Component {
     );
   }
 
-  render () {
+  render() {
     return (
       <Provider store={ this.props.store }>
         <div style={{ height: '100%' }}>
