@@ -13,7 +13,7 @@ const rootElement = document.getElementById('root');
 
 // client.invoke is some magical methods that is only available exists in the zendesk environment.
 try {
-  client.invoke('resize', {width: '400px', height: '320px'});
+  client.invoke('resize', {width: '600px', height: '320px'});
 } catch(e) {
   console.log('cannot resize zendesk client when developing outside of zendesk');
 }

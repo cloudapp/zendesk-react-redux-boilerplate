@@ -40,7 +40,7 @@ const mapStateToProps = state => ({
 });
 
 const mapDispatchToProps = (dispatch, ownProps) => ({
-  insertMessage: () => dispatch(insertMessage()),
+  insertMessage: () => dispatch(insertMessage('hello world')),
 })
 
 InsertMessageView.contextTypes = {
