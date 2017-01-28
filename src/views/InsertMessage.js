@@ -1,5 +1,7 @@
 import React, { Component, PropTypes } from 'react';
 import { connect } from 'react-redux';
+import { Link } from 'react-router';
+
 
 import { insertMessage } from '../actions/messages.js';
 
@@ -10,6 +12,7 @@ export class InsertMessageView extends Component {
   render () {
     return (
       <div className={ styles.container }>
+        <Link className={ styles.toHome } to='/'>Go Home</Link>
         <div className={ styles.instructions }>Press the button to insert into the ticket editor.</div>
         <button className={ styles.button } onClick={ this.props.insertMessage }>
           Click to insert message

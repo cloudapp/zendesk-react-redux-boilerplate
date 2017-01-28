@@ -11,7 +11,7 @@ export class HomeView extends Component {
     return (
       <section className={ styles.container }>
         <WelcomeMessage />
-        <Link to='/insert'>Insert Message</Link>
+        <Link className={ styles.toMessage } to='/insert'>Navigate to Insert Message</Link>
       </section>
     );
   }

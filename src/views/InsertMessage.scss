@@ -11,18 +11,23 @@
   padding: 50px;
 }
 
-.instructions {
+.toHome {
   order: 1;
+  padding: 10px;
+}
+
+.instructions {
+  order: 2;
   font-size: 16px;
   padding: 10px;
 }
 
 .button {
-  order: 2;
+  order: 3;
 }
 
 .success {
-  order: 3;
+  order: 4;
   font-weight: bold;
   font-size: 20px;
   padding: 10px;
