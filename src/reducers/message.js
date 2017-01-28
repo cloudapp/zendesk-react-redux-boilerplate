@@ -1,15 +1,19 @@
 import { handleActions } from 'redux-actions';
-import _ from 'lodash';
 
 const defaultState = {
-  welcomeMessage: 'Waiting to get message...'
+  resultMessage: '',
+  hasSuccess: false,
 };
 
 const messages = handleActions({
-  RECIEVE_MESSAGE: (state, action) => ({
-    ...state,
-    welcomeMessage: 'Random Message',
+  INSERT_MESSAGE: (state, action) => ({
+    hasSuccess: true,
+    resultMessage: 'success!',
   }),
+  MESSAGE_FAILED: (state, action) => ({
+    hasSuccess: false,
+    resultMessage: 'failed (are you outside of zendesk?)',
+  })
 }, defaultState);
 
 export default messages;

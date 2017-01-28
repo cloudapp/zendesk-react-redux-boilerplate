@@ -1,0 +1,29 @@
+.container {
+  display: -webkit-flex;
+  display: flex;
+  -webkit-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: center;
+  align-items: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  font-family: Open Sans,Helvetica Neue,Helvetica,sans-serif;
+  padding: 50px;
+}
+
+.instructions {
+  order: 1;
+  font-size: 16px;
+  padding: 10px;
+}
+
+.button {
+  order: 2;
+}
+
+.success {
+  order: 3;
+  font-weight: bold;
+  font-size: 20px;
+  padding: 10px;
+}
