@@ -9,7 +9,7 @@ export class InsertMessageView extends Component {
 
   render () {
     return (
-      <div className={ styles.insertMessage }>
+      <div className={ styles.container }>
         <div className={ styles.instructions }>Press the button to insert into the ticket editor.</div>
         <button className={ styles.button } onClick={ this.props.insertMessage }>
           Click to insert message
@@ -26,7 +26,7 @@ export class InsertMessageView extends Component {
 }
 
 InsertMessageView.propTypes = {
-  insertMessage: PropTypes.func.isRequired,
+  insertMessage: PropTypes.func,
   resultMessage: PropTypes.string,
   hasSuccess: PropTypes.bool,
 };
@@ -37,7 +37,7 @@ const mapStateToProps = state => ({
 });
 
 const mapDispatchToProps = (dispatch, ownProps) => ({
-  insertMessage: dispatch(insertMessage()),
+  insertMessage: () => dispatch(insertMessage()),
 })
 
 InsertMessageView.contextTypes = {

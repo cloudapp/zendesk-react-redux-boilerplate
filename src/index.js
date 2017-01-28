@@ -5,7 +5,6 @@ import { syncHistoryWithStore } from 'react-router-redux';
 import configureStore from './store/configureStore';
 import Root from './containers/Root.js';
 import routes from './routes';
-import storageAvailable from 'storage-available';
 import ZAFClient from 'zendesk_app_framework_sdk';
 
 var client = ZAFClient.init();

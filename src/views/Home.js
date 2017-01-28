@@ -1,7 +1,9 @@
-import React, { Component, PropTypes } from 'react';
+import React, { Component } from 'react';
+import { Link } from 'react-router';
 
 import WelcomeMessage from '../components/WelcomeMessage.js';
-import styles from './HomeView.scss';
+import styles from './Home.scss';
+
 
 export class HomeView extends Component {
 
@@ -9,6 +11,7 @@ export class HomeView extends Component {
     return (
       <section className={ styles.container }>
         <WelcomeMessage />
+        <Link to='/insert'>Insert Message</Link>
       </section>
     );
   }
