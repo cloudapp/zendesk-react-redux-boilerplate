@@ -3,7 +3,7 @@ import { connect } from 'react-redux';
 
 import { insertMessage } from '../actions/messages.js';
 
-import styles from './InsertMessageView.scss';
+import styles from './InsertMessage.scss';
 
 export class InsertMessageView extends Component {
 
@@ -14,10 +14,10 @@ export class InsertMessageView extends Component {
         <button className={ styles.button } onClick={ this.props.insertMessage }>
           Click to insert message
         </button>
-        { if this.props.hasSuccess &&
+        { this.props.hasSuccess &&
           <div className={ styles.success }>{ this.props.resultMessage }</div>
         }
-        { if !this.props.hasSuccess && 
+        { !this.props.hasSuccess && 
           <div className={ styles.failure }>{ this.props.resultMessage }</div>
         }
       </div>
