@@ -29,9 +29,16 @@ build/Release
 # Dependency directories
 node_modules
 jspm_packages
+dist/assets
 
 # Optional npm cache directory
 .npm
 
 # Optional REPL history
 .node_repl_history
+
+public/assets/*.hot-update.js*
+
+public/assets/index.js
+
+public/assets/index.js.map
