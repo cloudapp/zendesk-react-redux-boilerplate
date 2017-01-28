@@ -6,7 +6,8 @@ const WelcomeMessage = () => {
   return (
     <div className={ styles.welcome }>
       Welcome!
-    </div>);
+    </div>
+  );
 }
 
 export default WelcomeMessage;
