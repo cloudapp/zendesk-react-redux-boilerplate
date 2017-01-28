@@ -1,0 +1,17 @@
+{
+  "name": "Zendesk Ticket Editor App",
+  "author": {
+    "name": "Jane Doe",
+    "email": "jane@doe.com",
+    "url": "foobar.com"
+  },
+  "defaultLocale": "en",
+  "private": true,
+  "location": {
+    "support": {
+      "ticket_editor": "assets/index.html"
+    }
+  },
+  "version": "1.0",
+  "frameworkVersion": "2.0"
+}
