@@ -14,7 +14,7 @@ Some notables include:
 Download the source and `npm install`.
 
 ### Developing outside of Zendesk
-If you want to develop outside of a Zendesk ticket environment (`.../agent/tickets/<id>?zat=true`), run:
+If you want to develop outside of a Zendesk ticket environment (`localhost:4000`), run:
 ```bash
 npm run start
 ```
@@ -22,7 +22,7 @@ npm run start
 This is useful for developing `js` or `(sass|scss)` that do not interface directly with the `ZAF` client; this project uses a hot reloader for tracking code changes.  I found refreshing my apps in the ticket environment tedious for most of my changes.
 
 ### Developing inside of Zendesk
-If you want to develop outside of a Zendesk ticket environment (`.../agent/tickets/<id>?zat=true`), run:
+If you want to develop inside of a Zendesk ticket environment (`.../agent/tickets/<id>?zat=true`), run:
 ```bash
 nf start
 ```
