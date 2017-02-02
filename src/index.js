@@ -1,6 +1,6 @@
 import React from 'react';
 import { render } from 'react-dom';
-import { browserHistory } from 'react-router';
+import { createMemoryHistory } from 'react-router';
 import { syncHistoryWithStore } from 'react-router-redux';
 import configureStore from './store/configureStore';
 import Root from './containers/Root.js';
@@ -11,6 +11,9 @@ var client = ZAFClient.init();
 
 const rootElement = document.getElementById('root');
 
+// Zendesk hosting does not allow for urls to be manipulated; we need this here.s
+const memoryHistory = createMemoryHistory();
+
 // client.invoke is some magical methods that is only available exists in the zendesk environment.
 try {
   client.invoke('resize', {width: '600px', height: '320px'});
@@ -19,11 +22,11 @@ try {
 }
 
 const store = configureStore(window.__PRELOADED_STATE__);
-const history = syncHistoryWithStore(browserHistory, store);
+const history = syncHistoryWithStore(memoryHistory, store);
 
 render(
   <Root history={ history } routes={ routes } store={ store } />,
   rootElement
 );
 
-export { client };
+export { client, memoryHistory };
